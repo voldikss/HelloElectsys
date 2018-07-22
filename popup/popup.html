@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" name="description" content="课程监控状况"/>
+    <link rel="stylesheet" href="popup.css" type="text/css">
+    <script src="../js/jquery-3.3.1.min.js"></script>  <!--jquery库一定要最先导入。。。。-->
+    <script src="../js/popup.js"></script>
+</head>
+<body>
+
+<h2>课程监控状态</h2>
+
+<hr/>
+
+<div>
+    <table border="1">
+        <tr>
+            <td class="left-td">课程名称</td>
+            <td class="right-td" id="lname"></td>
+        </tr>
+        <tr>
+            <td>课程代码</td>
+            <td id="lcode"></td>
+        </tr>
+        <tr>
+            <td>教师名称</td>
+            <td id="tname"></td>
+        </tr>
+        <tr>
+            <td>课程状态</td>
+            <td id="lstatus"></td>
+        </tr>
+        <tr>
+            <td>刷新次数</td>
+            <td id="times"></td>
+        </tr>
+        <tr>
+            <td>监控状态</td>
+            <td id="monitor-status"></td>
+        </tr>
+    </table>
+</div>
+
+<input id="stop-btn" type="button" value="停止监控">
+<input id="clear-info" type="button" value="清除数据">
+
+<div id="copyright">
+    <div id="doc">
+        <a href="https://github.com/clouduan/HelloElectsys/" target="_blank">项目地址&使用说明</a>
+    </div>
+    <span id="author">©<a href="http://clouduan.github.io/" target="_blank">clouduan</a></span>
+    <span id="version"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "HelloElectsys",
+  "author": "clouduan",
+  "version": "0.1.10",
+  "icons": {
+    "48": "images/logo.png",
+    "128": "images/logo128.png"
+  },
+  "description": "上海交通大学选课网刷*工具",
+  "homepage_url": "https://github.com/clouduan/HelloElectsys",
+  "browser_action": {
+    "default_icon": {
+      "48": "images/logo.png",
+      "128": "images/logo128.png"
+    },
+    "default_title": "HelloElectsys",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.sjtu.edu.cn/*"
+      ],
+      "js": [
+        "js/jquery-3.3.1.min.js",
+        "js/jquery-ui-1.12.0.min.js",
+        "js/lesson.js",
+        "js/load.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "*://*.sjtu.edu.cn/*",
+    "notifications",
+    "tabs",
+    "storage",
+    "http://clouduan.github.io/*"
+  ],
+  "minimum_chrome_version": "49",
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "manifest.json"
+  ]
+}

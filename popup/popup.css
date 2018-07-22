@@ -1,0 +1,119 @@
+<!--表格使用结构化伪类 :nth-child() odd/even-->
+body {
+    background-color: #eeffff;
+    font-size: 15px;
+    width: 250px;
+    height: 300px;
+    border: 3px;
+}
+
+h2 {
+    font-family: "微软雅黑", "文泉驿微米黑", Arial, "黑体", "宋体";
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 5px;
+
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid black;
+}
+
+table {
+    width: 250px;
+    alignment: center;
+    background-color: white;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+#lname, #lcode, #lstatus, #tname, #times, #monitor-status {
+    color: orangered;
+    font-weight: 900;
+}
+
+.left-td {
+    width: 80px;
+}
+
+#stop-btn {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 25px;
+    color: white;
+    background-color: #4285f4;
+    border: #4285f4;
+    border-radius: 2.5px;
+    padding: 5px 5px;
+    text-decoration: none;
+    line-height: 20px;
+    display: inline-block;
+    cursor: hand;
+    font-style: normal;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+#stop-btn:hover {
+    background-color: #2062f4;
+}
+
+#clear-info {
+    float: right;
+    margin-right: 25px;
+    margin-top: 15px;
+    height: 25px;
+    color: white;
+    background-color: #4285f4;
+    border: #4285f4;
+    border-radius: 2.5px;
+    padding: 5px 5px;
+    text-decoration: none;
+    line-height: 20px;
+    display: inline-block;
+    cursor: hand;
+    font-style: normal;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+#clear-info:hover {
+    background-color: #2062f4;
+}
+
+#copyright {
+    margin-top: 15px;
+}
+
+#author {
+    color: gray;
+    float: right;
+    text-align: center;
+    font-family: "微软雅黑", "文泉驿微米黑", Arial, "黑体", "宋体";
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#version {
+    color: gray;
+    float: right;
+    text-align: center;
+    font-family: "微软雅黑", "文泉驿微米黑", Arial, "黑体", "宋体";
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#doc {
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#author a {
+    text-decoration: none;
+}
