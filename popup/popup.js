@@ -1,16 +1,20 @@
-function stop_monitor() {
+function stopMonitor() {
     $("#stop-btn").click(() => {
         console.log('lesson monitor disabled');
         monitor_enabled = 0;
-        chrome.tabs.query({active: true, currentWindow: true}, tabs => {
-            chrome.tabs.sendMessage(tabs[0].id, {content: monitor_enabled}, response => {
+        chrome.tabs.query({
+            active: true,
+            currentWindow: true
+        }, tabs => {
+            chrome.tabs.sendMessage(tabs[0].id, {
+                content: monitor_enabled
             })
         });
     });
 
 }
 
-function get_lesson_info() {
+function getLessonInfo() {
     chrome.storage.local.get(null, items => {
         lname = items["lname"];
         lcode = items["lcode"];
@@ -19,15 +23,15 @@ function get_lesson_info() {
         times = items["times"];
         monitor_status = items["monitor_status"];
         hide_info = items["hide_info"];
-        update_lesson_info(lname, lcode, tname, lstatus, times, monitor_status, hide_info)
+        updateLessonInfo(lname, lcode, tname, lstatus, times, monitor_status, hide_info)
     })
 }
 
-function update_lesson_info(lname, lcode, tname, lstatus, times, monitor_status, hide_info) {
+function updateLessonInfo(lname, lcode, tname, lstatus, times, monitor_status, hide_info) {
     if (hide_info) {
         return;
     }
-    if (tname == "") {
+    if (tname === "") {
         lname = "";
         lcode = "";
         lstatus = "";
@@ -42,22 +46,23 @@ function update_lesson_info(lname, lcode, tname, lstatus, times, monitor_status,
     $("#monitor-status").html(monitor_status);
 }
 
-function clear_info() {
+function clearLessonInfo() {
     $("#clear-info").click(() => {
-        chrome.storage.local.set({hide_info: 1}, result => {
+        chrome.storage.local.set({
+            hide_info: 1
         });
         window.close();
     })
 }
 
-function get_version() {
+function getExtVersion() {
     $("#version").html("HelloElectsys " + "(version " + chrome.runtime.getManifest().version + ")")
 }
 
-$(document).ready(() => {
-    stop_monitor();
-    get_lesson_info();
-    update_lesson_info();
-    clear_info();
-    get_version();
+document.addEventListener("DOMContentLoaded", () => {
+    stopMonitor();
+    getLessonInfo();
+    updateLessonInfo();
+    clearLessonInfo();
+    getExtVersion();
 });

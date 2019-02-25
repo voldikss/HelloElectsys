@@ -1,13 +1,13 @@
 {
   "name": "HelloElectsys",
-  "author": "clouduan",
-  "version": "0.1.10",
+  "author": "VOLDIKSS",
+  "version": "0.1.11",
   "icons": {
     "48": "images/logo.png",
     "128": "images/logo128.png"
   },
-  "description": "上海交通大学选课网刷*工具",
-  "homepage_url": "https://github.com/clouduan/HelloElectsys",
+  "description": "上海交通大学选课网辅（刷）助（课）工具",
+  "homepage_url": "https://github.com/voldikss/HelloElectsys",
   "browser_action": {
     "default_icon": {
       "48": "images/logo.png",
@@ -22,10 +22,10 @@
         "*://*.sjtu.edu.cn/*"
       ],
       "js": [
-        "js/jquery-3.3.1.min.js",
-        "js/jquery-ui-1.12.0.min.js",
-        "js/lesson.js",
-        "js/load.js"
+        "js/jquery.js",
+        "js/jquery-ui.js",
+        "js/util.js",
+        "js/content.js"
       ],
       "run_at": "document_start",
       "all_frames": true
@@ -35,8 +35,7 @@
     "*://*.sjtu.edu.cn/*",
     "notifications",
     "tabs",
-    "storage",
-    "http://clouduan.github.io/*"
+    "storage"
   ],
   "minimum_chrome_version": "49",
   "manifest_version": 2,
