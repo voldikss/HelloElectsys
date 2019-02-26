@@ -50,7 +50,7 @@ function optimizeSidebar() {
                 <img src="../imgs/icon.menu.gif" width="25" height="15">
             </td>
             <td class="menu">
-                <a href="https://github.com/voldikss/HelloElectsys">HelloElectsys</a>
+                <a href="https://github.com/voldikss/HelloElectsys" target='_blank'>Hello Electsys</a>
             </td>
         </tr>`);
 
